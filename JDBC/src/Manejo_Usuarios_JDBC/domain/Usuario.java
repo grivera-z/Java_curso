@@ -3,7 +3,7 @@ package Manejo_Usuarios_JDBC.domain;
 public class Usuario {
     private int id_usuario;
     private String usuario;
-    private String passworc;
+    private String password;
 
 
     public int getId_usuario() {
@@ -22,12 +22,12 @@ public class Usuario {
         this.usuario = usuario;
     }
 
-    public String getPassworc() {
-        return passworc;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassworc(String passworc) {
-        this.passworc = passworc;
+    public void setPassword(String passworc) {
+        this.password = passworc;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Usuario {
         return "Usuario{" +
                 "id_usuario=" + id_usuario +
                 ", usuario='" + usuario + '\'' +
-                ", passworc='" + passworc + '\'' +
+                ", passworc='" + password + '\'' +
                 '}';
     }
 }
