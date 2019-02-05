@@ -1,9 +1,9 @@
-package Callable_Statement_Funtion.CS.datos;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
+package Callable_Statement_F_P_C.CS.datos;
 
 import java.sql.*;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
 public class Conexion {
     private static String JDBC_DRIVER;

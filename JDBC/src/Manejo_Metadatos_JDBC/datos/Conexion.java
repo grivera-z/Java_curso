@@ -1,4 +1,4 @@
-package Callable_Statement_Procedure.CS.datos;
+package Manejo_Metadatos_JDBC.datos;
 
 import java.sql.*;
 import java.util.Enumeration;

@@ -1,7 +1,11 @@
-package Callable_Statement_Funtion.CS;
+package Callable_Statement_F_P_C.CS;
 
-import Callable_Statement_Funtion.CS.datos.Conexion;
-import java.sql.*;
+import Callable_Statement_F_P_C.CS.datos.Conexion;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Types;
 
 public class Test_Funtion {
     public static void main(String[] args) {

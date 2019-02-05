@@ -1,5 +1,5 @@
-package Callable_Statement_Procedure.CS;
-import Callable_Statement_Procedure.CS.datos.Conexion;
+package Callable_Statement_F_P_C.CS;
+import Callable_Statement_F_P_C.CS.datos.Conexion;
 import java.sql.*;
 
 public class Test_Procedimiento {
