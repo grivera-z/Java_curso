@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<firestorm-project version="4.0.1">
+  <name>SGAMySql</name>
+  <description />
+  <dbimport-config>
+    <jdbc-datasource>MySQL Datasource</jdbc-datasource>
+    <jdbc-catalog>sga</jdbc-catalog>
+    <jdbc-schema />
+    <sql-import-file />
+    <sql-vendor />
+    <import-tables>true</import-tables>
+    <import-views>true</import-views>
+    <import-procedures>true</import-procedures>
+    <prefer-objects>false</prefer-objects>
+    <sync-new>true</sync-new>
+    <sync-existing>true</sync-existing>
+    <sync-deleted>true</sync-deleted>
+    <map-large-integer-to-bigdecimal>false</map-large-integer-to-bigdecimal>
+    <verbose-logging>false</verbose-logging>
+    <filter-list>
+      <filter>usuario</filter>
+    </filter-list>
+  </dbimport-config>
+  <database>
+    <platform>MySQL</platform>
+    <catalog-name>sga</catalog-name>
+    <schema-name />
+    <table-list>
+      <table>
+        <sql-name>usuario</sql-name>
+        <java-name>Usuario</java-name>
+        <primary-key>
+          <column-list>
+            <column>id_usuario</column>
+          </column-list>
+        </primary-key>
+        <column-list>
+          <column>
+            <java-name>idUsuario</java-name>
+            <java-type>int</java-type>
+            <java-default-value />
+            <sql-name>id_usuario</sql-name>
+            <sql-type>INT</sql-type>
+            <jdbc-type>INTEGER</jdbc-type>
+            <jdbc-precision>10</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>true</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>usuario</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>usuario</sql-name>
+            <sql-type>VARCHAR</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>45</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>password</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>password</sql-name>
+            <sql-type>VARCHAR</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>45</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+        </column-list>
+        <finder-list>
+          <finder>
+            <name>findByPrimaryKey</name>
+            <multi-finder>false</multi-finder>
+            <where>id_usuario = :idUsuario</where>
+            <order-by />
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>idUsuario</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>INTEGER</jdbc-type>
+                <jdbc-precision>10</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findAll</name>
+            <multi-finder>true</multi-finder>
+            <where />
+            <order-by>id_usuario</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list />
+          </finder>
+          <finder>
+            <name>findWhereIdUsuarioEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>id_usuario = :idUsuario</where>
+            <order-by>id_usuario</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>idUsuario</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>INTEGER</jdbc-type>
+                <jdbc-precision>10</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereUsuarioEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>usuario = :usuario</where>
+            <order-by>usuario</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>usuario</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>45</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWherePasswordEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>password = :password</where>
+            <order-by>password</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>password</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>45</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+        </finder-list>
+      </table>
+    </table-list>
+    <view-list />
+    <procedure-list />
+    <custom-sql-list />
+  </database>
+  <provider-options />
+</firestorm-project>
+
