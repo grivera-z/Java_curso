@@ -18,7 +18,7 @@
     <map-large-integer-to-bigdecimal>false</map-large-integer-to-bigdecimal>
     <verbose-logging>false</verbose-logging>
     <filter-list>
-      <filter>usuario</filter>
+      <filter>persona</filter>
     </filter-list>
   </dbimport-config>
   <database>
@@ -27,19 +27,19 @@
     <schema-name />
     <table-list>
       <table>
-        <sql-name>usuario</sql-name>
-        <java-name>Usuario</java-name>
+        <sql-name>persona</sql-name>
+        <java-name>Persona</java-name>
         <primary-key>
           <column-list>
-            <column>id_usuario</column>
+            <column>id_persona</column>
           </column-list>
         </primary-key>
         <column-list>
           <column>
-            <java-name>idUsuario</java-name>
+            <java-name>idPersona</java-name>
             <java-type>int</java-type>
             <java-default-value />
-            <sql-name>id_usuario</sql-name>
+            <sql-name>id_persona</sql-name>
             <sql-type>INT</sql-type>
             <jdbc-type>INTEGER</jdbc-type>
             <jdbc-precision>10</jdbc-precision>
@@ -50,29 +50,29 @@
             <sequence-name />
           </column>
           <column>
-            <java-name>usuario</java-name>
+            <java-name>nombre</java-name>
             <java-type>java.lang.String</java-type>
             <java-default-value />
-            <sql-name>usuario</sql-name>
+            <sql-name>nombre</sql-name>
             <sql-type>VARCHAR</sql-type>
             <jdbc-type>VARCHAR</jdbc-type>
             <jdbc-precision>45</jdbc-precision>
             <jdbc-scale>0</jdbc-scale>
-            <nullable>false</nullable>
+            <nullable>true</nullable>
             <unique>false</unique>
             <auto-increment>false</auto-increment>
             <sequence-name />
           </column>
           <column>
-            <java-name>password</java-name>
+            <java-name>apellido</java-name>
             <java-type>java.lang.String</java-type>
             <java-default-value />
-            <sql-name>password</sql-name>
+            <sql-name>apellido</sql-name>
             <sql-type>VARCHAR</sql-type>
             <jdbc-type>VARCHAR</jdbc-type>
             <jdbc-precision>45</jdbc-precision>
             <jdbc-scale>0</jdbc-scale>
-            <nullable>false</nullable>
+            <nullable>true</nullable>
             <unique>false</unique>
             <auto-increment>false</auto-increment>
             <sequence-name />
@@ -82,12 +82,12 @@
           <finder>
             <name>findByPrimaryKey</name>
             <multi-finder>false</multi-finder>
-            <where>id_usuario = :idUsuario</where>
+            <where>id_persona = :idPersona</where>
             <order-by />
             <query-type>WHERE</query-type>
             <parameter-list>
               <parameter>
-                <java-name>idUsuario</java-name>
+                <java-name>idPersona</java-name>
                 <java-type>int</java-type>
                 <jdbc-type>INTEGER</jdbc-type>
                 <jdbc-precision>10</jdbc-precision>
@@ -99,19 +99,19 @@
             <name>findAll</name>
             <multi-finder>true</multi-finder>
             <where />
-            <order-by>id_usuario</order-by>
+            <order-by>id_persona</order-by>
             <query-type>WHERE</query-type>
             <parameter-list />
           </finder>
           <finder>
-            <name>findWhereIdUsuarioEquals</name>
+            <name>findWhereIdPersonaEquals</name>
             <multi-finder>true</multi-finder>
-            <where>id_usuario = :idUsuario</where>
-            <order-by>id_usuario</order-by>
+            <where>id_persona = :idPersona</where>
+            <order-by>id_persona</order-by>
             <query-type>WHERE</query-type>
             <parameter-list>
               <parameter>
-                <java-name>idUsuario</java-name>
+                <java-name>idPersona</java-name>
                 <java-type>int</java-type>
                 <jdbc-type>INTEGER</jdbc-type>
                 <jdbc-precision>10</jdbc-precision>
@@ -120,14 +120,14 @@
             </parameter-list>
           </finder>
           <finder>
-            <name>findWhereUsuarioEquals</name>
+            <name>findWhereNombreEquals</name>
             <multi-finder>true</multi-finder>
-            <where>usuario = :usuario</where>
-            <order-by>usuario</order-by>
+            <where>nombre = :nombre</where>
+            <order-by>nombre</order-by>
             <query-type>WHERE</query-type>
             <parameter-list>
               <parameter>
-                <java-name>usuario</java-name>
+                <java-name>nombre</java-name>
                 <java-type>java.lang.String</java-type>
                 <jdbc-type>VARCHAR</jdbc-type>
                 <jdbc-precision>45</jdbc-precision>
@@ -136,14 +136,14 @@
             </parameter-list>
           </finder>
           <finder>
-            <name>findWherePasswordEquals</name>
+            <name>findWhereApellidoEquals</name>
             <multi-finder>true</multi-finder>
-            <where>password = :password</where>
-            <order-by>password</order-by>
+            <where>apellido = :apellido</where>
+            <order-by>apellido</order-by>
             <query-type>WHERE</query-type>
             <parameter-list>
               <parameter>
-                <java-name>password</java-name>
+                <java-name>apellido</java-name>
                 <java-type>java.lang.String</java-type>
                 <jdbc-type>VARCHAR</jdbc-type>
                 <jdbc-precision>45</jdbc-precision>
@@ -158,6 +158,27 @@
     <procedure-list />
     <custom-sql-list />
   </database>
-  <provider-options />
+  <provider-options>
+    <default-codegen-provider>j2se</default-codegen-provider>
+    <provider name="j2se">
+      <property key="app-name" value="SGAMySql" />
+      <property key="dao-strategy" value="jdbc" />
+      <property key="delete-files" value="false" />
+      <property key="dto-fields-public" value="false" />
+      <property key="generate-dynamic-inserts" value="false" />
+      <property key="generate-dynamic-updates" value="false" />
+      <property key="jdbc-driver" value="com.mysql.jdbc.Driver" />
+      <property key="jdbc-pwd" value="admin" />
+      <property key="jdbc-table-aliases" value="false" />
+      <property key="jdbc-url" value="jdbc:mysql://localhost/sga" />
+      <property key="jdbc-user" value="root" />
+      <property key="jdbc30-capable" value="true" />
+      <property key="logging" value="stdout" />
+      <property key="output-dir" value="C:\Users\Gabri\Documents\NetBeansProjects\GIT\Firestorm\Code" />
+      <property key="overwrite-resource-manager" value="true" />
+      <property key="package-name" value="com.gm.sgamysql" />
+      <property key="prefix-schema-name" value="true" />
+    </provider>
+  </provider-options>
 </firestorm-project>
 
