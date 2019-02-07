@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<firestorm-project version="4.0.1">
+  <name>MyOracle</name>
+  <description />
+  <dbimport-config>
+    <jdbc-datasource>Oracle Datasource</jdbc-datasource>
+    <jdbc-catalog />
+    <jdbc-schema>HR</jdbc-schema>
+    <sql-import-file />
+    <sql-vendor />
+    <import-tables>true</import-tables>
+    <import-views>true</import-views>
+    <import-procedures>true</import-procedures>
+    <prefer-objects>false</prefer-objects>
+    <sync-new>true</sync-new>
+    <sync-existing>true</sync-existing>
+    <sync-deleted>true</sync-deleted>
+    <map-large-integer-to-bigdecimal>false</map-large-integer-to-bigdecimal>
+    <verbose-logging>false</verbose-logging>
+    <filter-list>
+      <filter>COUNTRIES</filter>
+      <filter>DEPARTMENTS</filter>
+      <filter>EMPLOYEES</filter>
+      <filter>JOBS</filter>
+      <filter>JOB_HISTORY</filter>
+      <filter>LOCATIONS</filter>
+      <filter>REGIONS</filter>
+    </filter-list>
+  </dbimport-config>
+  <database>
+    <platform>Oracle</platform>
+    <catalog-name />
+    <schema-name>HR</schema-name>
+    <table-list>
+      <table>
+        <sql-name>EMPLOYEES</sql-name>
+        <java-name>Employees</java-name>
+        <primary-key>
+          <column-list>
+            <column>EMPLOYEE_ID</column>
+          </column-list>
+        </primary-key>
+        <foreign-key-list>
+          <foreign-key>
+            <name>EMP_MANAGER_FK</name>
+            <parent-table>EMPLOYEES</parent-table>
+            <cardinality>1-many</cardinality>
+            <nav-to-parent-term>Employees</nav-to-parent-term>
+            <nav-to-child-term>Employees1</nav-to-child-term>
+            <nav-to-parent>true</nav-to-parent>
+            <nav-to-child>false</nav-to-child>
+            <column-list>
+              <column>
+                <column-name>MANAGER_ID</column-name>
+                <ref-column-name>EMPLOYEE_ID</ref-column-name>
+              </column>
+            </column-list>
+          </foreign-key>
+        </foreign-key-list>
+        <column-list>
+          <column>
+            <java-name>employeeId</java-name>
+            <java-type>int</java-type>
+            <java-default-value />
+            <sql-name>EMPLOYEE_ID</sql-name>
+            <sql-type>NUMBER</sql-type>
+            <jdbc-type>DECIMAL</jdbc-type>
+            <jdbc-precision>6</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>firstName</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>FIRST_NAME</sql-name>
+            <sql-type>VARCHAR2</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>20</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>true</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>lastName</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>LAST_NAME</sql-name>
+            <sql-type>VARCHAR2</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>25</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>email</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>EMAIL</sql-name>
+            <sql-type>VARCHAR2</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>25</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>phoneNumber</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>PHONE_NUMBER</sql-name>
+            <sql-type>VARCHAR2</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>20</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>true</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>hireDate</java-name>
+            <java-type>java.util.Date</java-type>
+            <java-default-value />
+            <sql-name>HIRE_DATE</sql-name>
+            <sql-type>DATE</sql-type>
+            <jdbc-type>TIMESTAMP</jdbc-type>
+            <jdbc-precision>7</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>jobId</java-name>
+            <java-type>java.lang.String</java-type>
+            <java-default-value />
+            <sql-name>JOB_ID</sql-name>
+            <sql-type>VARCHAR2</sql-type>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <jdbc-precision>10</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>false</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>salary</java-name>
+            <java-type>float</java-type>
+            <java-default-value />
+            <sql-name>SALARY</sql-name>
+            <sql-type>NUMBER</sql-type>
+            <jdbc-type>DECIMAL</jdbc-type>
+            <jdbc-precision>8</jdbc-precision>
+            <jdbc-scale>2</jdbc-scale>
+            <nullable>true</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>commissionPct</java-name>
+            <java-type>float</java-type>
+            <java-default-value />
+            <sql-name>COMMISSION_PCT</sql-name>
+            <sql-type>NUMBER</sql-type>
+            <jdbc-type>DECIMAL</jdbc-type>
+            <jdbc-precision>2</jdbc-precision>
+            <jdbc-scale>2</jdbc-scale>
+            <nullable>true</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>managerId</java-name>
+            <java-type>int</java-type>
+            <java-default-value />
+            <sql-name>MANAGER_ID</sql-name>
+            <sql-type>NUMBER</sql-type>
+            <jdbc-type>DECIMAL</jdbc-type>
+            <jdbc-precision>6</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>true</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+          <column>
+            <java-name>departmentId</java-name>
+            <java-type>int</java-type>
+            <java-default-value />
+            <sql-name>DEPARTMENT_ID</sql-name>
+            <sql-type>NUMBER</sql-type>
+            <jdbc-type>DECIMAL</jdbc-type>
+            <jdbc-precision>4</jdbc-precision>
+            <jdbc-scale>0</jdbc-scale>
+            <nullable>true</nullable>
+            <unique>false</unique>
+            <auto-increment>false</auto-increment>
+            <sequence-name />
+          </column>
+        </column-list>
+        <finder-list>
+          <finder>
+            <name>findByPrimaryKey</name>
+            <multi-finder>false</multi-finder>
+            <where>EMPLOYEE_ID = :employeeId</where>
+            <order-by />
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>employeeId</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>6</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findAll</name>
+            <multi-finder>true</multi-finder>
+            <where />
+            <order-by>EMPLOYEE_ID</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list />
+          </finder>
+          <finder>
+            <name>findByDepartments</name>
+            <multi-finder>true</multi-finder>
+            <where>DEPARTMENT_ID = :departmentId</where>
+            <order-by />
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>departmentId</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>4</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findByEmployees</name>
+            <multi-finder>true</multi-finder>
+            <where>MANAGER_ID = :managerId</where>
+            <order-by />
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>managerId</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>6</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findByJobs</name>
+            <multi-finder>true</multi-finder>
+            <where>JOB_ID = :jobId</where>
+            <order-by />
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>jobId</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>10</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereEmployeeIdEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>EMPLOYEE_ID = :employeeId</where>
+            <order-by>EMPLOYEE_ID</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>employeeId</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>6</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereFirstNameEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>FIRST_NAME = :firstName</where>
+            <order-by>FIRST_NAME</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>firstName</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>20</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereLastNameEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>LAST_NAME = :lastName</where>
+            <order-by>LAST_NAME</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>lastName</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>25</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereEmailEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>EMAIL = :email</where>
+            <order-by>EMAIL</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>email</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>25</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWherePhoneNumberEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>PHONE_NUMBER = :phoneNumber</where>
+            <order-by>PHONE_NUMBER</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>phoneNumber</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>20</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereHireDateEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>HIRE_DATE = :hireDate</where>
+            <order-by>HIRE_DATE</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>hireDate</java-name>
+                <java-type>java.util.Date</java-type>
+                <jdbc-type>TIMESTAMP</jdbc-type>
+                <jdbc-precision>7</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereJobIdEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>JOB_ID = :jobId</where>
+            <order-by>JOB_ID</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>jobId</java-name>
+                <java-type>java.lang.String</java-type>
+                <jdbc-type>VARCHAR</jdbc-type>
+                <jdbc-precision>10</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereSalaryEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>SALARY = :salary</where>
+            <order-by>SALARY</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>salary</java-name>
+                <java-type>float</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>8</jdbc-precision>
+                <jdbc-scale>2</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereCommissionPctEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>COMMISSION_PCT = :commissionPct</where>
+            <order-by>COMMISSION_PCT</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>commissionPct</java-name>
+                <java-type>float</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>2</jdbc-precision>
+                <jdbc-scale>2</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereManagerIdEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>MANAGER_ID = :managerId</where>
+            <order-by>MANAGER_ID</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>managerId</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>6</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+          <finder>
+            <name>findWhereDepartmentIdEquals</name>
+            <multi-finder>true</multi-finder>
+            <where>DEPARTMENT_ID = :departmentId</where>
+            <order-by>DEPARTMENT_ID</order-by>
+            <query-type>WHERE</query-type>
+            <parameter-list>
+              <parameter>
+                <java-name>departmentId</java-name>
+                <java-type>int</java-type>
+                <jdbc-type>DECIMAL</jdbc-type>
+                <jdbc-precision>4</jdbc-precision>
+                <jdbc-scale>0</jdbc-scale>
+              </parameter>
+            </parameter-list>
+          </finder>
+        </finder-list>
+      </table>
+    </table-list>
+    <view-list />
+    <procedure-list />
+    <custom-sql-list />
+  </database>
+  <provider-options>
+    <default-codegen-provider>j2se</default-codegen-provider>
+    <provider name="j2se">
+      <property key="app-name" value="hrOracle" />
+      <property key="dao-strategy" value="jdbc" />
+      <property key="delete-files" value="false" />
+      <property key="dto-fields-public" value="false" />
+      <property key="generate-dynamic-inserts" value="false" />
+      <property key="generate-dynamic-updates" value="false" />
+      <property key="jdbc-driver" value="oracle.jdbc.driver.OracleDriver" />
+      <property key="jdbc-pwd" value="hr" />
+      <property key="jdbc-table-aliases" value="false" />
+      <property key="jdbc-url" value="jdbc:oracle:thin:@localhost:1521:XE" />
+      <property key="jdbc-user" value="hr" />
+      <property key="jdbc30-capable" value="true" />
+      <property key="logging" value="stdout" />
+      <property key="output-dir" value="C:\Users\Gabri\Documents\NetBeansProjects\GIT\Firestorm\Code_Oracle" />
+      <property key="overwrite-resource-manager" value="true" />
+      <property key="package-name" value="com.gm.hrOracle" />
+      <property key="prefix-schema-name" value="true" />
+    </provider>
+  </provider-options>
+</firestorm-project>
+
