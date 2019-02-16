@@ -1,4 +1,4 @@
-package Estructuras_Listas_Enlazadas;
+package _1_Estructuras_Listas_Enlazadas;
 
 public class Libro {
     private String titulo;

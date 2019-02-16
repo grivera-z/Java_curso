@@ -1,6 +1,4 @@
-package Estructuras_Listas_Enlazadas;
-
-import java.util.List;
+package _1_Estructuras_Listas_Enlazadas;
 
 public class ListasLigadasSimples_M {
     public static void main(String[] args) {
