@@ -111,10 +111,20 @@ public class Arbol_Binario implements IBST<Empleado> {
         postordenImpl("");
     }
 
+    private Arbol_Binario minimo(){
+        if(izdo !=null && !izdo.esVacio()) {
+            return izdo.minimo();
+        }else {
+            return this;
+        }
+    }
+
     private void eliminarImpl(int id_Empleado){
         if(izdo != null && dcho != null){
             //Eliminar con 2 Hijos
-
+            Arbol_Binario minimo = dcho.minimo();
+            this.valor = minimo.valor;
+            dcho.eliminar(minimo.valor.getId_Empleado());
         }else if (izdo != null || dcho != null){
             //Eliminar con 1 Hijos
             Arbol_Binario sustituto = (izdo != null) ? izdo:dcho;
