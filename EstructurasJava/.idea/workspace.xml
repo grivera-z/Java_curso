@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="565b60cd-b3bf-4007-a4e1-3422d7c64010" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EstructurasJava/_4_Estrucuras_Arbol_Binario/Arbol_Binario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstructurasJava/_4_Estrucuras_Arbol_Binario/Arbol_Binario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Arbol_Binario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Arbol_Binario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Images.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../Images.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Arbol_Binario_Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="374">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,12 +29,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Empleado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="714">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
                 <element signature="method#equals#0;class#Empleado#0" />
-                <element signature="e#1894#1895#0" expanded="true" />
-                <element signature="e#1974#1975#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,11 +91,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="75" />
+    <option name="y" value="128" />
+    <option name="width" value="1300" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -110,8 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,21 +112,12 @@
               <item name="EstructurasJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="EstructurasJava" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="EstructurasJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EstructurasJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EstructurasJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EstructurasJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="_4_Estrucuras_Arbol_Binario" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,9 +212,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1369936" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13918306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -374,6 +358,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Arbol_Binario_Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Empleado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="method#equals#0;class#Empleado#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Arbol_Binario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -386,28 +390,6 @@
             <element signature="e#2848#2849#0" expanded="true" />
             <element signature="e#3169#3170#0" expanded="true" />
             <element signature="e#3202#3203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Empleado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-          <folding>
-            <element signature="method#equals#0;class#Empleado#0" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_4_Estrucuras_Arbol_Binario/Arbol_Binario_Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

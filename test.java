@@ -1,7 +1,11 @@
 public class hola {
-    public class NODO_BT{
-        private int valor;
-        private NODO_BT izq= null;
-        private NODO_BT der= null;
+    private class NODO_BT{
+        public int valor;
+        public NODO_BT izq= null;
+        public NODO_BT der= null;
+
+        public NODO_BT(int valor){
+            this.valor = valor;
+        }
     }
 }
