@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>Ejercicio Formulario</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="estilos.css">
+    <script type="text/javascript" src="validaciones.js"></script>
     <!-- <script src="main.js"></script> -->
 </head>
 <body>
-    <form name="form1" action="/recursoEnServidor" method="post">
+    <form name="form1" action="/recursoEnServidor" method="post" onsubmit="return validarForma(this);">
         <input type="hidden" name="oculto" value="valorOculto">
-        <table>
+        <table width="200" id="#one-column-emphasis">
             <caption>Formulario Registro de Datos</caption>
             <tr>
-                <td class="oce-first">Usuario:</td>
+                <td class="oce-first">Usuario: (*)</td>
                 <td>
-                    <input class="default" type="text" name="usuario" value="Escribir Usuario"/>
+                    <input class="default" type="text" name="usuario" value="Escribir Usuario" onfocus="this.select();"/>
                 </td>
             </tr>
             <tr>
-                <td class="oce-first">Password</td>
+                <td class="oce-first">Password: (*)</td>
                 <td>
-                        <input class="default" type="password" name="password"/>
+                        <input class="default" type="password" name="password" onfocus="this.select();"/>
                 </td>
             </tr>
             <tr>
-                <td class="oce-first">Tecnolog&iacute;as de Inter&eacute;s</td>
+                <td class="oce-first">Tecnolog&iacute;as de Inter&eacute;s: (*)</td>
                 <td>
                     Java <input type="checkbox" name="tecnologia" value="java"> &nbsp;&nbsp;&nbsp;
                     .Net <input type="checkbox" name="tecnologia" value="net"> &nbsp;&nbsp;&nbsp;
@@ -33,7 +33,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="oce-first">G&eacute;nero</td>
+                <td class="oce-first">G&eacute;nero: (*)</td>
                 <td>
                     Hombre<input type="radio" name="genero" value="H">
                     &nbsp;&nbsp;&nbsp;
@@ -41,7 +41,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="oce-first">Ocupac&oacute;n</td>
+                <td class="oce-first">Ocupac&oacute;n: (*)</td>
                 <td>
                     <select name="ocupacion" id="default">
                         <option value="1">Profesor</option>
@@ -63,8 +63,9 @@
             </tr>
             <tr>
                 <td class="oce-first">Comentarios</td>
-                <td> <textarea name="Comentarios" cols="30" rows="2" class="default">Escribir Un Texto</textarea></td>
+                <td> <textarea name="Comentarios" cols="30" rows="2" class="default" onfocus="this.select();">Escribir Un Texto</textarea></td>
             </tr>
+            <p id="mensajeHtml"></p>
             <tr style="text-align:center">
                 <td>
                     <input type="reset" value="Limpiar" class="default">
