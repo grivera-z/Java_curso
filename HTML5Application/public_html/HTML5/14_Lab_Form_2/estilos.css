@@ -1,0 +1,13 @@
+body{
+    background: black;
+    font-family: "Lucida Sans Unicode", "Lucida Grande";
+    font-size: 12px;
+    color:orangered;
+}
+
+.boton{
+    background: #F95700;
+    padding: 4px 10px;
+    color: #FFF;
+    border: #C30 1px solid;
+    }

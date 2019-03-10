@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio Forms 2</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js"></script>
+</head>
+    <body>
+        <form name="form1" action="/recursoEnServidor" method="post" onsubmit="return validarForma(this);">
+            <input type="hidden" name="oculto" value="valorOculto">
+            <table width="300" id="#one-column-emphasis">
+                <caption>Formulario Registro de Datos</caption>
+                <tr>
+                    <td class="oce-first">Usuario: (*)</td>
+                    <td>
+                        <input class="default" type="text" name="usuario" value="Escribir Usuario" onfocus="this.select();"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">Password: (*)</td>
+                    <td>
+                            <input class="default" type="password" name="password" onfocus="this.select();"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">E-mail: (*)</td>
+                    <td>
+                        <input class="default" type="text" name="email" onfocus="this.select();"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset" value="Limpiar" class="boton">
+                        <input type="submit" value="Enviar" class="boton">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
