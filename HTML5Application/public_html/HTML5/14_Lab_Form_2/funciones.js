@@ -18,7 +18,10 @@ function validarForma(forma){
     }
 
     var email = forma.email;
-    return ValidateEmail(email)
+    if(!ValidateEmail(email)){
+        alert("si entro");
+        return false;
+    }
 
     // document.getElementById("mensajeHtml").innerHTML =  "Formulario Valido, Enviando Datos...";
     setTimeout( function ( ) { alert( "Formulario Valido, Enviando Datos..." ); }, 3000 );
@@ -33,14 +36,12 @@ function ValidateEmail(mail)
 {
     console.log(mail);
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(mail.value.match(mailformat))
-    {
+    if(mail.value.match(mailformat)){
         alert("Todo bien");
         return true;
     }
-    else
-    {
-    alert("You have entered an invalid email address!");
-    return false;
+    else{
+        alert("You have entered an invalid email address!");
+        return false;
     }
 }
