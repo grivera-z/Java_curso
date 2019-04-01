@@ -21,6 +21,25 @@ and open the template in the editor.
             <br>
             <input type="submit" value="Enviar">
         </form>
+        <h1>LLamando al servlet <a href="/Servlets_JSPs/ServletHeaders">Manejo Cabeceros</a></h1>
+        <h1>LLamando al servlet <a href="/Servlets_JSPs/TipoNavegador">Tipo Navegador</a></h1>
+        <h1>LLamando al servlet Codigos de Estado</h1>
+        <ol>
+            <li><a href="/Servlets_JSPs/RedireccionamientoServlet">Link al Servlet</a></li>
+            <li><a href="/Servlets_JSPs/RecursoNoExiste">Link a recurso no existente</a></li>
+            <li>
+                <fieldset>
+                    <legend>Formulario de Autorizaci&oacute;n</legend>
+                    <form name="form2" action="/Servlets_JSPs/CodigoFormularioServlet" method="POST">
+                        Usuario: <input type="text" name="usuario">
+                        <br/>
+                        Password: <input type="password" name="password">
+                        <br/>
+                        <input type="submit" value="Enviar"/>
+                    </form>
+                </fieldset>
+            </li>
+        </ol>
 
     </body>
 </html>
